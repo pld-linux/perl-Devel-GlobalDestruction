@@ -9,7 +9,7 @@ Summary:	Devel::GlobalDestruction - Expose PL_dirty, the flag which marks global
 #Summary(pl.UTF-8):	
 Name:		perl-Devel-GlobalDestruction
 Version:	0.02
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
