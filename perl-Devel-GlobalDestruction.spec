@@ -6,15 +6,15 @@
 %define	pdir	Devel
 %define	pnam	GlobalDestruction
 Summary:	Devel::GlobalDestruction - Expose PL_dirty, the flag which marks global destruction
-#Summary(pl.UTF-8):	
+Summary(pl.UTF-8):	Devel::GlobalDestruction - udostępnienie PL_dirty - flagi oznaczającej globalną destrukcję
 Name:		perl-Devel-GlobalDestruction
-Version:	0.02
-Release:	2
+Version:	0.03
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Devel/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	f43db3fc6a9de1bf8dbd4792f7d3e3d2
+Source0:	http://www.cpan.org/modules/by-module/Devel/FLORA/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	09b70f95536464d8901675f230fbc3aa
 URL:		http://search.cpan.org/dist/Devel-GlobalDestruction/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -25,11 +25,12 @@ BuildRequires:	perl-Sub-Exporter
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Devel::GlobalDestruction - expose PL_dirty, the flag which marks global
-destruction.
+Devel::GlobalDestruction - expose PL_dirty, the flag which marks
+global destruction.
 
-# %description -l pl.UTF-8
-# TODO
+%description -l pl.UTF-8
+Devel::GlobalDestruction udostępnia PL_dirty - flagę oznaczającą
+globalną destrukcję.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -54,7 +55,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_vendorarch}/Devel/*.pm
+%{perl_vendorarch}/Devel/GlobalDestruction.pm
 %dir %{perl_vendorarch}/auto/Devel/GlobalDestruction
-%attr(755,root,root) %{perl_vendorarch}/auto/Devel/GlobalDestruction/*.so
-%{_mandir}/man3/*
+%{perl_vendorarch}/auto/Devel/GlobalDestruction/GlobalDestruction.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Devel/GlobalDestruction/GlobalDestruction.so
+%{_mandir}/man3/Devel::GlobalDestruction.3pm*
