@@ -8,20 +8,22 @@
 Summary:	Devel::GlobalDestruction - Expose PL_dirty, the flag which marks global destruction
 Summary(pl.UTF-8):	Devel::GlobalDestruction - udostępnienie PL_dirty - flagi oznaczającej globalną destrukcję
 Name:		perl-Devel-GlobalDestruction
-Version:	0.05
-Release:	2
+Version:	0.11
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Devel/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e99ef189e9f85549e42c32b5168f7f47
+# Source0-md5:	f2f811fc3e8876aa3fa23d1d16dfb2bd
 URL:		http://search.cpan.org/dist/Devel-GlobalDestruction/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Scope-Guard
 BuildRequires:	perl-Sub-Exporter
+BuildRequires:	perl-Sub-Exporter-Progressive
 %endif
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -55,8 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_vendorarch}/Devel/GlobalDestruction.pm
-%dir %{perl_vendorarch}/auto/Devel/GlobalDestruction
-%{perl_vendorarch}/auto/Devel/GlobalDestruction/GlobalDestruction.bs
-%attr(755,root,root) %{perl_vendorarch}/auto/Devel/GlobalDestruction/GlobalDestruction.so
+%{perl_vendorlib}/Devel/GlobalDestruction.pm
 %{_mandir}/man3/Devel::GlobalDestruction.3pm*
