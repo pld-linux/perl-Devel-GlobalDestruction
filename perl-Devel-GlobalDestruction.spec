@@ -16,13 +16,15 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Devel/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f2f811fc3e8876aa3fa23d1d16dfb2bd
 URL:		http://search.cpan.org/dist/Devel-GlobalDestruction/
+BuildRequires:	perl-ExtUtils-CBuilder >= 0.27
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Scope-Guard
 BuildRequires:	perl-Sub-Exporter
-BuildRequires:	perl-Sub-Exporter-Progressive
+BuildRequires:	perl-Sub-Exporter-Progressive >= 0.001006
 %endif
+Requires:	perl-Sub-Exporter-Progressive >= 0.001006
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
