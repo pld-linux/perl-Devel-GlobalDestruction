@@ -8,13 +8,13 @@
 Summary:	Devel::GlobalDestruction - Expose PL_dirty, the flag which marks global destruction
 Summary(pl.UTF-8):	Devel::GlobalDestruction - udostępnienie PL_dirty - flagi oznaczającej globalną destrukcję
 Name:		perl-Devel-GlobalDestruction
-Version:	0.12
+Version:	0.13
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Devel/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	87382bd2f512b0703dd55da6b2b16ec4
+# Source0-md5:	e7be00040827e204b2b6cba2f3166074
 URL:		http://search.cpan.org/dist/Devel-GlobalDestruction/
 BuildRequires:	perl-ExtUtils-CBuilder >= 0.27
 BuildRequires:	perl-devel >= 1:5.8.0
