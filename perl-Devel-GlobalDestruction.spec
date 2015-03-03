@@ -22,9 +22,9 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Scope-Guard
 BuildRequires:	perl-Sub-Exporter
-BuildRequires:	perl-Sub-Exporter-Progressive >= 0.001006
+BuildRequires:	perl-Sub-Exporter-Progressive >= 0.001011
 %endif
-Requires:	perl-Sub-Exporter-Progressive >= 0.001006
+Requires:	perl-Sub-Exporter-Progressive >= 0.001011
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
